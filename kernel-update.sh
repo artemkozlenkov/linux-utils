@@ -6,7 +6,6 @@
 sudo apt update
 
 sudo apt install mainline
-sudo add-apt-repository --remove ppa:cappelikan/ppa
 
 #uncomment for deletion
 #sudo apt remove mainline
