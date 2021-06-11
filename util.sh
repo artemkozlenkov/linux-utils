@@ -6,3 +6,10 @@ git rebase --continue
 
 #speed check, python a prerequisite
 curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+
+#append the new line to file
+echo 'some asci' | tee -a >> ${test_file}.txt
+
+#copy to buffer without empty spaces and tabs
+cat ${test_file}.txt | sed 's/ *$//' | tr -d " \t\n\r" |  xclip -sel clip
+
