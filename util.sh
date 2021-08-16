@@ -15,3 +15,6 @@ cat ${test_file}.txt | sed 's/ *$//' | tr -d " \t\n\r" |  xclip -sel clip
 
 # reduce pdf file size (opt: /ebook /screen /printer)
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+
+# manage keepass in browser
+bash <(curl -s https://raw.githubusercontent.com/keepassxreboot/keepassxc/master/utils/keepassxc-snap-helper.sh)
