@@ -18,3 +18,15 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQ
 
 # manage keepass in browser
 bash <(curl -s https://raw.githubusercontent.com/keepassxreboot/keepassxc/master/utils/keepassxc-snap-helper.sh)
+
+#scrolling with momentum
+`$ sudo apt install xserver-xorg-input-synaptics`
+`$ sudo cp /usr/share/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf`
+```bash
+synclient VertScrollDelta=-70\
+synclient -l | grep Coasting
+    CornerCoasting          = 0
+    CoastingSpeed           = 20
+    CoastingFriction        = 50
+```
+
